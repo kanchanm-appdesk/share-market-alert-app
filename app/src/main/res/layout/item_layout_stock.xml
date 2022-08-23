@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stockCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8dp"
+    app:cardCornerRadius="@dimen/_4dp"
+    app:cardElevation="@dimen/_8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/companyNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firasans_medium"
+        android:layout_marginStart="@dimen/_8dp"
+        android:text="@string/tata_motors_ltd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/exchangeTypeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firasans_regular"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:text="@string/nse"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/companyNameTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/companyIdNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firasans_regular"
+        android:text="@string/tatamotors"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintStart_toStartOf="@+id/companyNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/companyNameTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stockPriceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firasans_medium"
+        android:text="@string/_569_55"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="@+id/exchangeTypeTv"
+        app:layout_constraintTop_toTopOf="@+id/companyIdNameTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dailyDiffPercentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firasans_medium"
+        android:text="@string/diffpercent"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintEnd_toEndOf="@+id/stockPriceTv"
+        app:layout_constraintTop_toBottomOf="@+id/stockPriceTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_20dp"
+    tools:context=".ui.fragment.AlertFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/alertTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firasans_semi_bold"
+        android:text="@string/alert"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/profileImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="@+id/alertTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/alertTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:fontFamily="@font/firasans_semi_bold"
+        android:text="@string/date_sample"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertTv" />
+
+    <SearchView
+        android:id="@+id/searchStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="@color/off_white"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/query_hint"
+        android:searchIcon="@drawable/ic_search"
+        app:layout_constraintTop_toBottomOf="@+id/dateTv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/stockTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        android:fontFamily="@font/firasans_regular"
+        android:text="@string/stocks"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchStock" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStocks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12dp"
+        app:layout_constraintTop_toBottomOf="@id/stockTv"
+        tools:listitem="@layout/item_layout_stock" />
+
+    <include
+        layout="@layout/layout_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewStocks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

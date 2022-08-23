@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Share Market Alert App</string>
+    <string name="market">Market</string>
+    <string name="alert">Alert</string>
+    <string name="watchlist">Watchlist</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date_sample">Thursday / 4 Aug</string>
+    <string name="query_hint">Ex. TCS</string>
+    <string name="stocks">Stocks</string>
+    <string name="tata_motors_ltd">Tata Motors Ltd.</string>
+    <string name="nse">NSE</string>
+    <string name="tatamotors">TATAMOTORS</string>
+    <string name="_569_55">569.55</string>
+    <string name="diffpercent">+1.80 (0.02%)</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="noInternetMsg">You don’t seem to have an active internet connection. Please check your connection and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="home">Home</string>
+    <string name="alerts">Alerts</string>
+</resources>
